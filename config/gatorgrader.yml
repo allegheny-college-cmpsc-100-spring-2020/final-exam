@@ -21,8 +21,8 @@ src/main:
             MatchFileFragment --fragment "private String" --count 1 --exact
             MatchFileFragment --fragment "private double" --count 2 --exact
             MatchFileFragment --fragment "public Widget" --count 1 --exact
-            MatchFileFragment --fragment "public String toString" --count 1 --exact
-            MatchFileFragment --fragment "return" --count 1 --exact
+            MatchFileFragment --fragment "public void" --count 3 --exact
+            MatchFileFragment --fragment "return" --count 3 --exact
             
 ExecuteCommand --command "gradle build"
 MatchCommandFragment --command "gradle run" --fragment "Thingamajig" --count 1
