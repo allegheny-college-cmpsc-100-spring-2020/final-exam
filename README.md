@@ -2,7 +2,7 @@
 
 **NOTE: You are only required to complete one of the Final options; if choosing to do both, you will receive the higher>
 * Assigned: 27 April, 2020
-* Due: 5 May 2020 at **12:00 AM** (this would have been the end of our normally-scheduled exam time)
+* Due: 5 May 2020 at **12:00 PM** (this would have been the end of our normally-scheduled exam time)
 * Point value: 100 pts
 
 ## Activity: Widget Factory reprise
