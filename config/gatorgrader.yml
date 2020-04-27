@@ -1,0 +1,33 @@
+---
+name: final-exam
+break: true
+indent: 4
+---
+src/main:
+    java:
+        widgets/MakeWidgets.java:
+            ConfirmFileExists
+            MatchFileFragment --fragment "TODO" --count 0 --exact
+            MatchFileFragment --fragment "{Your Name Here}" --count 0 --exact
+            MatchFileRegex --regex "while|for" --count 1
+            MatchFileRegex --regex "ArrayList<Widget>|Widget\[\]" --count 1
+            
+src/main:
+    java:
+        widgets/Widget.java:
+            ConfirmFileExists
+            MatchFileFragment --fragment "TODO" --count 0 --exact
+            MatchFileFragment --fragment "{Your Name Here}" --count 0 --exact
+            MatchFileFragment --fragment "private String" --count 1 --exact
+            MatchFileFragment --fragment "private double" --count 2 --exact
+            MatchFileFragment --fragment "public Widget" --count 1 --exact
+            MatchFileFragment --fragment "public String toString" --count 1 --exact
+            MatchFileFragment --fragment "return" --count 1 --exact
+            
+ExecuteCommand --command "gradle build"
+MatchCommandFragment --command "gradle run" --fragment "Thingamajig" --count 1
+MatchCommandFragment --command "gradle run" --fragment "Zonk" --count 1
+MatchCommandFragment --command "gradle run" --fragment "Maguffin" --count 1
+MatchCommandFragment --command "gradle run" --fragment "Whatchamacallit" --count 1
+MatchCommandFragment --command "gradle run" --fragment "Gadget" --count 1
+CountCommandOutput --command "gradle -q --console plain run" --count 6
